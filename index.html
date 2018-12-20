@@ -18,10 +18,39 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.css" rel="stylesheet">
+  <link id="original" rel="stylesheet" type="text/css" href="css/resume.css">
 
+  <script type="text/javascript">
+  function changecss() {
+    var attriname = document.getElementById("original").getAttribute("href");
+    //alert(attriname);
+    if(attriname == "css/resume.css")
+    {
+      document.getElementById('original').setAttribute('href', "css/resumen.css");
+    }
+    else {
+      document.getElementById('original').setAttribute('href', "css/resume.css");
+    }
+  }
+ </script>
+
+
+ <!--
+<button onclick="changecss()"> Day Mode </button>
+  <div id="button">
+  <label class="switch">
+  <input type="checkbox" onclick="changecss()">
+  <span class="slider round"></span>
+  </label>
+
+  <button id="btn" onclick="changecss()">
+    <i class="fas fa-moon"></i>
+    <button>
+
+</div>-->
   </head>
+
+
 
   <body id="page-top">
 
@@ -29,7 +58,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Abhishek Anand</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile2.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -37,6 +66,7 @@
       </button>
       <div class="navbar-collapse collapse show" id="navbarSupportedContent" style="">
         <ul class="navbar-nav">
+
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger active" href="#about">About</a>
           </li>
@@ -59,6 +89,12 @@
             <a class="nav-link js-scroll-trigger" href="blog_wait.html">Blog</a>
           </li>
 
+          <li class="nav-item">
+            <button id="btn" onclick="changecss()">
+              <span title="Toggle Dark/Light Theme"><i class="fas fa-sun"></i></span>
+            </button>
+          </li>
+
         </ul>
       </div>
 
@@ -66,7 +102,7 @@
     </nav>
 
     <div class="container-fluid p-0">
-	<style> background-color: #868e96 </style>
+
 
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
@@ -138,6 +174,7 @@
 
 
       </section>
+
       <hr class="m-0">
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
@@ -274,6 +311,7 @@
 
         <hr class="m-0">
       </div>
+
 
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
